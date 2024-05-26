@@ -4,6 +4,8 @@
  */
 package Views;
 
+import Daos.Consultas;
+import Vector.ListaConsultas;
 import javax.swing.JOptionPane;
 
 /**
@@ -304,6 +306,45 @@ public class VentanaGenerarConsulta extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
+        String nombres = txtNombre.getText();
+        String apellidos = txtApellido.getText();
+        String numero = txtTelefono.getText();
+        String direccion = txtDireccion.getText();
+        String fecha = Fecha.getDateFormatString();
+        
+    if(nombres.isEmpty() || nombres.isBlank()){
+             JOptionPane.showMessageDialog(this, 
+                    "Coloque un nombre valido.", "Nombre",
+                    JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if(apellidos.isEmpty() || apellidos.isBlank()){
+             JOptionPane.showMessageDialog(this, 
+                    "Coloque un apellido valido.", "Apellido",
+                    JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if(numero.isEmpty() || numero.isBlank()){
+             JOptionPane.showMessageDialog(this, 
+                    "Coloque un numero valido.", "Numero",
+                    JOptionPane.WARNING_MESSAGE);
+        }
+        
+        Consultas nuevaConsulta = new Consultas();
+        nuevaConsulta.setNombres(nombres);
+        nuevaConsulta.setApellidos(apellidos);
+        nuevaConsulta.setTelefono(numero);
+        nuevaConsulta.setDireccion(direccion);
+        nuevaConsulta.setFechaNacimiento(fecha);
+        
+        //se guarda
+        ListaConsultas.consulta.add(nuevaConsulta);
+         JOptionPane.showMessageDialog(this, 
+                    "Su Consulta fue generada exitosamente.", "Generada",
+                    JOptionPane.INFORMATION_MESSAGE);
+         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
