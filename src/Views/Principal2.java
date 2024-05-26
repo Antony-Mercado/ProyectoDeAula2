@@ -33,8 +33,9 @@ public class Principal2 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnGConsulta = new javax.swing.JButton();
         btnGPaciente = new javax.swing.JButton();
-        btnRPago = new javax.swing.JButton();
+        txtRmascota = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        btnRPago1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         GenerarC = new javax.swing.JMenuItem();
@@ -82,11 +83,16 @@ public class Principal2 extends javax.swing.JFrame {
             }
         });
 
-        btnRPago.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnRPago.setText("Realizar Pago");
-        btnRPago.addActionListener(new java.awt.event.ActionListener() {
+        txtRmascota.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtRmascota.setText("Registrar Mascota");
+        txtRmascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRPagoActionPerformed(evt);
+                txtRmascotaActionPerformed(evt);
+            }
+        });
+        txtRmascota.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRmascotaKeyTyped(evt);
             }
         });
 
@@ -99,34 +105,42 @@ public class Principal2 extends javax.swing.JFrame {
             }
         });
 
+        btnRPago1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnRPago1.setText("Realizar Pago");
+        btnRPago1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRPago1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnGConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnGPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnRPago, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(286, 286, 286)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(121, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(219, 219, 219))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(btnGConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnGPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(txtRmascota, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnRPago1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,11 +153,16 @@ public class Principal2 extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRPago, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(btnGConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnRPago1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtRmascota, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnGPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(30, 30, 30)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(100, Short.MAX_VALUE))
@@ -257,17 +276,21 @@ public class Principal2 extends javax.swing.JFrame {
       //  ventana.setVisible(true);
     }//GEN-LAST:event_LoginActionPerformed
 
-    private void btnRPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRPagoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRPagoActionPerformed
+    private void txtRmascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRmascotaActionPerformed
+        VentanaMascotas ventana = new VentanaMascotas();
+        
+        ventana.setVisible(true);
+        
+        this.dispose(); 
+    }//GEN-LAST:event_txtRmascotaActionPerformed
 
     private void btnGConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGConsultaActionPerformed
         // TODO add your handling code here:
         VentanaGenerarConsulta ventana = new VentanaGenerarConsulta();
         
         ventana.setVisible(true);
-        
         this.dispose();
+        
     }//GEN-LAST:event_btnGConsultaActionPerformed
 
     private void btnGPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGPacienteActionPerformed
@@ -285,6 +308,18 @@ public class Principal2 extends javax.swing.JFrame {
         
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void btnRPago1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRPago1ActionPerformed
+        VentanaPago ventana = new VentanaPago();
+        
+        ventana.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnRPago1ActionPerformed
+
+    private void txtRmascotaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRmascotaKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRmascotaKeyTyped
 
     /**
      * @param args the command line arguments
@@ -313,6 +348,12 @@ public class Principal2 extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -327,7 +368,7 @@ public class Principal2 extends javax.swing.JFrame {
     private javax.swing.JMenu Login;
     private javax.swing.JButton btnGConsulta;
     private javax.swing.JButton btnGPaciente;
-    private javax.swing.JButton btnRPago;
+    private javax.swing.JButton btnRPago1;
     private javax.swing.JMenuItem itemIngresar;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
@@ -346,5 +387,6 @@ public class Principal2 extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton txtRmascota;
     // End of variables declaration//GEN-END:variables
 }

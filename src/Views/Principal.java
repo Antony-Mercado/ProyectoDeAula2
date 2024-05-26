@@ -319,7 +319,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
 
-        String correoCorrecto = "admin@admin.com";
+        String correoCorrecto = "admin";
         String claveCorrecta = "123";
         
         if(txtCorreo.getText().equals(correoCorrecto)){
