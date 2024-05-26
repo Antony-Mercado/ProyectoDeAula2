@@ -277,8 +277,8 @@ public class Principal2 extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginActionPerformed
 
     private void txtRmascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRmascotaActionPerformed
-        VentanaMascotas ventana = new VentanaMascotas();
-        
+        VentanaMascota2 ventana = new VentanaMascota2();
+        ventana.setLocationRelativeTo(this);
         ventana.setVisible(true);
         
         this.dispose(); 

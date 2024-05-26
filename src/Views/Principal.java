@@ -292,29 +292,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
-      
-        //Ingresar ventana = new Ingresar();
-        
-        //ventana.setVisible(true);
-        
-        this.dispose();
+
     }//GEN-LAST:event_LoginActionPerformed
 
     private void itemIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemIngresarActionPerformed
-       // Ingresar ventana = new Ingresar();
-        
-       // ventana.setVisible(true);
-        
-        this.dispose();
+    
     }//GEN-LAST:event_itemIngresarActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        VentanaMascotas ventana = new VentanaMascotas();
-        
-        ventana.setVisible(true);
-        
-        this.dispose();
+        // TODO add your handling code here
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
@@ -337,7 +323,7 @@ public class Principal extends javax.swing.JFrame {
             
             Dueño d = ListaDueños.login(txtCorreo.getText(), String.valueOf(txtClave.getPassword()));
             if(d != null){
-                VentanaMascotas v = new VentanaMascotas();
+                VentanaMascota2 v = new VentanaMascota2();
                 v.setVisible(true);
                 v.setLocationRelativeTo(null);
                 this.dispose();
